@@ -49,12 +49,9 @@ function useCountUp(end: number, duration = 2000) {
 
 export function StatsSection() {
   return (
-    <section
-      className="relative py-16 bg-center bg-cover"
-      style={{ backgroundImage: "url('/sossession.jpg')", backgroundPosition: "center 80%" }}
-    >
-      {/* Animated white wave just above the stats */}
-      <div className="absolute -top-10 left-0 right-0 overflow-hidden">
+    <section className="relative py-16 ocean-gradient">
+      {/* White header band with animated wave */}
+      <div className="absolute -top-10 left-0 right-0 h-16 bg-white overflow-hidden">
         <Wave
           fill="#ffffff"
           paused={false}
@@ -62,8 +59,6 @@ export function StatsSection() {
           style={{ width: "100%", height: 64 }}
         />
       </div>
-      {/* subtle dark overlay for legibility */}
-      <div className="absolute inset-0 bg-black/35" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-display font-bold text-3xl md:text-4xl text-white mb-4">Our 2024 Stats</h2>

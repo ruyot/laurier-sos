@@ -24,11 +24,11 @@ export function HeroSection() {
 
       {/* Decorative subtle crystals */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-8 w-3 h-3 bg-accent/40 rotate-45 rounded-[2px] animate-sparkle" />
-        <div className="absolute top-36 right-16 w-2.5 h-2.5 bg-accent/30 rotate-45 rounded-[2px] animate-float" />
-        <div className="absolute bottom-28 left-1/4 w-2.5 h-2.5 bg-accent/30 rotate-45 rounded-[2px] animate-sparkle" />
-        <div className="absolute bottom-16 right-1/3 w-3 h-3 bg-accent/40 rotate-45 rounded-[2px] animate-float" />
-        <div className="absolute top-1/3 left-1/2 w-2 h-2 bg-accent/30 rotate-45 rounded-[2px] animate-sparkle" />
+        <div className="absolute top-20 left-8 w-3 h-3 bg-accent/70 rotate-45 rounded-[2px] animate-sparkle" />
+        <div className="absolute top-36 right-16 w-3 h-3 bg-accent/60 rotate-45 rounded-[2px] animate-float" />
+        <div className="absolute bottom-28 left-1/4 w-3 h-3 bg-accent/60 rotate-45 rounded-[2px] animate-sparkle" />
+        <div className="absolute bottom-16 right-1/3 w-3.5 h-3.5 bg-accent/70 rotate-45 rounded-[2px] animate-float" />
+        <div className="absolute top-1/3 left-1/2 w-3 h-3 bg-accent/60 rotate-45 rounded-[2px] animate-sparkle" />
       </div>
 
       {/* Content */}
