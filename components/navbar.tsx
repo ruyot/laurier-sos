@@ -58,6 +58,7 @@ export function Navbar() {
   }
 
   return (
+    <>
     <nav
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg"
@@ -139,8 +140,13 @@ export function Navbar() {
           </div>
         </div>
       </div>
-      {/* Scroll progress underline */}
-      <div className="absolute left-0 bottom-0 h-0.5 bg-brand-500 transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
     </nav>
+    {/* Scroll progress bar just under navbar */}
+    <div className="fixed left-0 top-16 z-[60] w-full pointer-events-none">
+      <div className="h-1 bg-brand-100">
+        <div className="h-full bg-brand-500 transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
+      </div>
+    </div>
+    </>
   )
 }

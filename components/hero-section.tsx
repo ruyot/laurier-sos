@@ -18,8 +18,9 @@ export function HeroSection() {
         className="absolute inset-0 bg-center bg-cover"
         style={{ backgroundImage: "url('/sossession.jpg')" }}
       />
-      {/* Dark overlay for contrast */}
-      <div className="absolute inset-0 bg-black/50" />
+      {/* Blue-tinted overlay for contrast */}
+      <div className="absolute inset-0 bg-brand-900/40" />
+      <div className="absolute inset-0 bg-black/35" />
 
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
