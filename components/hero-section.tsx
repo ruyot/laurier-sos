@@ -23,20 +23,23 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-black/35" />
 
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-        <h1 className="font-display font-bold text-5xl md:text-7xl mb-6 leading-tight">
-          Students Offering
-          <br />
-          <span className="text-accent">Support</span>
+      <div className="relative z-10 text-white px-4 max-w-5xl mx-auto">
+        <h1 className="font-display font-bold text-4xl md:text-6xl mb-6 leading-tight">
+          <span className="[text-shadow:_-1px_0_#1e90ff,1px_0_#1e90ff,0_-1px_#1e90ff,0_1px_#1e90ff]">S</span>
+          <span className="pl-1">tudents </span>
+          <span className="[text-shadow:_-1px_0_#1e90ff,1px_0_#1e90ff,0_-1px_#1e90ff,0_1px_#1e90ff]">O</span>
+          <span className="pl-1">ffering </span>
+          <span className="[text-shadow:_-1px_0_#1e90ff,1px_0_#1e90ff,0_-1px_#1e90ff,0_1px_#1e90ff]">S</span>
+          <span className="pl-1 text-accent">upport</span>
         </h1>
 
-        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl leading-relaxed">
           Review sessions that get you exam-ready.
           <br />
           Supporting Laurier students since 2004.
         </p>
 
-        <div className="flex flex-col gap-4 justify-center items-center">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-3">
           <Button
             onClick={scrollToSessions}
             size="lg"
