@@ -17,11 +17,18 @@ const navItems = [
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
   const [activeSection, setActiveSection] = useState("home")
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
+
+      const docHeight = document.documentElement.scrollHeight
+      const winHeight = window.innerHeight
+      const maxScroll = Math.max(docHeight - winHeight, 1)
+      const percent = (window.scrollY / maxScroll) * 100
+      setScrollProgress(Math.min(Math.max(percent, 0), 100))
 
       // Update active section based on scroll position
       const sections = navItems.map((item) => item.href.slice(1))
@@ -53,8 +60,7 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-lg"
       )}
     >
       <div className="container mx-auto px-4">
@@ -62,7 +68,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex items-center space-x-2">
             <img src="/soslogo.png" alt="Laurier SOS" className="w-8 h-8 object-contain" />
-            <span className={cn("font-display font-bold text-xl", isScrolled ? "text-brand-900" : "text-white")}>Laurier SOS</span>
+            <span className={cn("font-display font-bold text-xl text-brand-900")}>Laurier SOS</span>
           </div>
 
           {/* Desktop Navigation */}
@@ -73,7 +79,7 @@ export function Navbar() {
                 onClick={() => scrollToSection(item.href)}
                 className={cn(
                   "text-sm font-medium transition-colors duration-200 hover:text-brand-500",
-                  activeSection === item.href.slice(1) ? "text-brand-500" : isScrolled ? "text-gray-700" : "text-white",
+                  activeSection === item.href.slice(1) ? "text-brand-500" : "text-gray-700",
                 )}
               >
                 {item.name}
@@ -97,7 +103,7 @@ export function Navbar() {
           <div className="md:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon" className={cn(isScrolled ? "text-gray-700" : "text-white")}>
+                <Button variant="ghost" size="icon" className={cn("text-gray-700") }>
                   <Menu className="w-6 h-6" />
                 </Button>
               </SheetTrigger>
@@ -133,6 +139,8 @@ export function Navbar() {
           </div>
         </div>
       </div>
+      {/* Scroll progress underline */}
+      <div className="absolute left-0 bottom-0 h-0.5 bg-brand-500 transition-[width] duration-150" style={{ width: `${scrollProgress}%` }} />
     </nav>
   )
 }

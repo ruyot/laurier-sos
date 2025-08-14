@@ -35,7 +35,7 @@ export function HeroSection() {
           Supporting Laurier students since 2004.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col gap-4 justify-center items-center">
           <Button
             onClick={scrollToSessions}
             size="lg"
