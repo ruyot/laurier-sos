@@ -22,8 +22,17 @@ export function HeroSection() {
       <div className="absolute inset-0 bg-brand-900/40" />
       <div className="absolute inset-0 bg-black/35" />
 
+      {/* Decorative subtle crystals */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-8 w-3 h-3 bg-accent/40 rotate-45 rounded-[2px] animate-sparkle" />
+        <div className="absolute top-36 right-16 w-2.5 h-2.5 bg-accent/30 rotate-45 rounded-[2px] animate-float" />
+        <div className="absolute bottom-28 left-1/4 w-2.5 h-2.5 bg-accent/30 rotate-45 rounded-[2px] animate-sparkle" />
+        <div className="absolute bottom-16 right-1/3 w-3 h-3 bg-accent/40 rotate-45 rounded-[2px] animate-float" />
+        <div className="absolute top-1/3 left-1/2 w-2 h-2 bg-accent/30 rotate-45 rounded-[2px] animate-sparkle" />
+      </div>
+
       {/* Content */}
-      <div className="relative z-10 text-white px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-white text-center px-4 max-w-5xl mx-auto">
         <h1 className="font-display font-bold text-4xl md:text-6xl mb-6 leading-tight">
           <span className="[text-shadow:_-1px_0_#1e90ff,1px_0_#1e90ff,0_-1px_#1e90ff,0_1px_#1e90ff]">S</span>
           <span className="pl-1">tudents </span>
@@ -39,7 +48,7 @@ export function HeroSection() {
           Supporting Laurier students since 2004.
         </p>
 
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-3">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-3 justify-center">
           <Button
             onClick={scrollToSessions}
             size="lg"
