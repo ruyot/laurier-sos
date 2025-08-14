@@ -48,10 +48,10 @@ function useCountUp(end: number, duration = 2000) {
 
 export function StatsSection() {
   return (
-    <section className="py-16 ocean-gradient">
-      {/* Animated white wave above stats */}
-      <div className="-mt-16">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 animate-wave">
+    <section className="relative py-16 ocean-gradient">
+      {/* White wave transition at the top (like original) */}
+      <div className="absolute -top-10 left-0 right-0">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 rotate-180 animate-wave">
           <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="white" />
         </svg>
       </div>

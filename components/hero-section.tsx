@@ -50,7 +50,7 @@ export function HeroSection() {
           <Button
             asChild
             size="lg"
-            className="bg-accent hover:bg-accent/90 text-brand-900 font-semibold px-8 py-3 text-lg"
+            className="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-3 text-lg"
           >
             <a
               href="https://linktr.ee/soslaurier"

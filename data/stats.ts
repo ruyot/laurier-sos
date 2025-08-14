@@ -17,7 +17,7 @@ export const stats: Stat[] = [
   },
   {
     label: "Supporting students in Waterloo since",
-    value: "2014",
-    countUp: 2014,
+    value: "2004",
+    countUp: 2004,
   },
 ]
