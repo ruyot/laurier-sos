@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
+import Wave from "react-wavify"
 import { stats } from "@/data/stats"
 
 function useCountUp(end: number, duration = 2000) {
@@ -49,11 +50,14 @@ function useCountUp(end: number, duration = 2000) {
 export function StatsSection() {
   return (
     <section className="relative py-16 ocean-gradient">
-      {/* White wave transition at the top (like original) */}
-      <div className="absolute -top-10 left-0 right-0">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-16 rotate-180 animate-wave">
-          <path d="M0,60 C300,120 900,0 1200,60 L1200,120 L0,120 Z" fill="white" />
-        </svg>
+      {/* Animated white wave just above the stats */}
+      <div className="absolute -top-10 left-0 right-0 overflow-hidden">
+        <Wave
+          fill="#ffffff"
+          paused={false}
+          options={{ height: 20, amplitude: 18, speed: 0.18, points: 4 }}
+          style={{ width: "100%", height: 64 }}
+        />
       </div>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
