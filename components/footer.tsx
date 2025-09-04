@@ -90,7 +90,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 pt-8 text-center">
-          <p className="text-white/60">© 2024 Laurier SOS (Students Offering Support). All rights reserved.</p>
+          <p className="text-white/60">© 2025 Laurier SOS (Students Offering Support). All rights reserved.</p>
           <p className="text-white/40 text-sm mt-2">
             Made with ❤️ by students, for students at Wilfrid Laurier University
           </p>

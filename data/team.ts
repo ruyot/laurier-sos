@@ -2,7 +2,7 @@ export interface TeamMember {
   id: string
   name: string
   role: string
-  category: "Executives" | "VPs" | "Directors" | "Tutors"
+  category: "Presidents" | "VPs" | "Directors" | "Tutors"
   image?: string
   linkedin?: string
   email?: string
@@ -11,12 +11,12 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
-  // Executives
+  // Presidents
   {
     id: "1",
     name: "Alex Johnson",
     role: "Co-President",
-    category: "Executives",
+    category: "Presidents",
     image: "/professional-headshot.png",
     program: "Business Administration",
     year: "4th Year",
@@ -25,7 +25,7 @@ export const team: TeamMember[] = [
     id: "2",
     name: "Sarah Chen",
     role: "Co-President",
-    category: "Executives",
+    category: "Presidents",
     image: "/professional-headshot.png",
     program: "Economics",
     year: "4th Year",

@@ -7,7 +7,7 @@ import { Linkedin, Mail } from "lucide-react"
 import { team } from "@/data/team"
 
 export function TeamSection() {
-  const categories = ["Executives", "VPs", "Directors"] as const
+  const categories = ["Presidents", "VPs", "Directors"] as const
 
   const getTeamByCategory = (category: string) => {
     return team.filter((member) => member.category === category)
@@ -32,7 +32,11 @@ export function TeamSection() {
               <div key={category}>
                 <h3 className="font-display font-semibold text-3xl text-brand-900 text-center mb-8">{category}</h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div className={`grid gap-6 max-w-6xl mx-auto ${
+                  category === "Presidents" 
+                    ? "grid-cols-1 md:grid-cols-2 justify-items-center" 
+                    : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+                }`}>
                   {members.map((member) => (
                     <TeamMemberCard key={member.id} member={member} />
                   ))}
