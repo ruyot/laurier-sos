@@ -34,11 +34,15 @@ export function TeamSection() {
 
                 <div className={`grid gap-6 max-w-6xl mx-auto ${
                   category === "Presidents" 
-                    ? "grid-cols-1 md:grid-cols-2 justify-items-center" 
+                    ? "grid-cols-1 md:grid-cols-2 justify-center" 
                     : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                 }`}>
                   {members.map((member) => (
-                    <TeamMemberCard key={member.id} member={member} />
+                    <TeamMemberCard 
+                      key={member.id} 
+                      member={member} 
+                      fixedWidth={category === "Presidents"}
+                    />
                   ))}
                 </div>
               </div>
@@ -50,7 +54,7 @@ export function TeamSection() {
   )
 }
 
-function TeamMemberCard({ member }: { member: (typeof team)[0] }) {
+function TeamMemberCard({ member, fixedWidth = false }: { member: (typeof team)[0]; fixedWidth?: boolean }) {
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -60,7 +64,7 @@ function TeamMemberCard({ member }: { member: (typeof team)[0] }) {
   }
 
   return (
-    <Card className="hover:shadow-lg transition-all duration-300 group">
+    <Card className={`hover:shadow-lg transition-all duration-300 group ${fixedWidth ? 'w-80' : ''}`}>
       <CardContent className="p-6 text-center">
         <Avatar className="w-24 h-24 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300">
           <AvatarImage src={member.image || "/placeholder.svg"} alt={member.name} />
